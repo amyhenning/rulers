@@ -5,6 +5,7 @@ module Rulers
 
   class Application
     def call(env)
+      `echo debug > debug.txt`; # Ch 1, exercise 1
       [200, {'Content-Type' => 'text/html'},
         ["Hello from Ruby on Rulers!"]]
     end
