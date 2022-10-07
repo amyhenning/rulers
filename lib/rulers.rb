@@ -1,6 +1,8 @@
 require "rulers/array"
-require "rulers/version"
+require "rulers/dependencies"
 require "rulers/routing"
+require "rulers/util"
+require "rulers/version"
 
 module Rulers
   class Error < StandardError; end
@@ -15,7 +17,7 @@ module Rulers
       end
 
       if env['PATH_INFO'] == '/'
-         # Ch 2, exercise 3 - Roots and Routes
+         #   Ch 2, exercise 3 - Roots and Routes
          # This establishes a root route (tightly coupled to the best_quotes app for now)
         # klass, act = [Object.const_get('QuotesController'), 'a_quote']
         # controller = klass.new(env)
